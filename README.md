@@ -76,3 +76,21 @@ Example output:
   }
 ]
 ```
+
+## Recipe Step Normalizer
+
+Convert a multi-line list of recipe steps into clean, numbered JSON.
+
+Example input:
+
+Preheat oven to 180°C.
+Mix flour and sugar in a bowl.
+
+Output:
+
+[
+{ "step": 1, "text": "Preheat oven to 180°C." },
+{ "step": 2, "text": "Mix flour and sugar in a bowl." }
+]
+
+**Live demo:** https://recipe-title-normalizer.vercel.app/step-normalizer
