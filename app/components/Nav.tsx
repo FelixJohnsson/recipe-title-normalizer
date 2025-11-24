@@ -37,6 +37,9 @@ export function Nav() {
       >
         Timing
       </Link>
+      <Link href="/yield-normalizer" className={linkClass("/yield-normalizer")}>
+        Yield
+      </Link>
     </nav>
   );
 }

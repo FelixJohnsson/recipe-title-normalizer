@@ -108,3 +108,13 @@ Example output:
 ```json
 [{ "minutes": 12, "minutes_max": 15 }, { "minutes": 80 }, { "minutes": 5 }]
 ```
+
+## Recipe Yield Normalizer
+
+Parse messy yield lines into structured servings.
+
+Examples:
+
+- "Serves 4" → `{ "servingsMin": 4 }`
+- "Serves 2–3" → `{ "servingsMin": 2, "servingsMax": 3 }`
+- "Makes 24 cookies" → `{ "servingsMin": 24, "unit": "cookies" }`
