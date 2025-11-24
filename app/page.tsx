@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { normalizeTitle } from "./lib/normalizeTitle";
+import { Nav } from "./components/Nav";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -12,12 +12,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center px-4">
       <header className="w-full max-w-xl flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Recipe Title Normalizer</h1>
-        <nav className="text-sm flex gap-3">
-          <span className="font-semibold">Home</span>
-          <Link href="/ingredient-normalizer" className="underline">
-            Ingredient
-          </Link>
-        </nav>
+        <Nav />
       </header>
 
       <div className="w-full max-w-xl space-y-3">
