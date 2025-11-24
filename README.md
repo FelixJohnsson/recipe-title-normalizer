@@ -93,4 +93,18 @@ Output:
 { "step": 2, "text": "Mix flour and sugar in a bowl." }
 ]
 
-**Live demo:** https://recipe-title-normalizer.vercel.app/step-normalizer
+## Recipe Timing Extractor
+
+Extract all time durations from recipe text into structured minutes.
+
+Example input:
+
+Simmer for 12–15 minutes, stirring occasionally.  
+Bake for 1 hour and 20 minutes.  
+Rest for about 5 mins before serving.
+
+Example output:
+
+```json
+[{ "minutes": 12, "minutes_max": 15 }, { "minutes": 80 }, { "minutes": 5 }]
+```

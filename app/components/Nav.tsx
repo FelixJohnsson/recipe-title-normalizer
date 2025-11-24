@@ -31,6 +31,12 @@ export function Nav() {
       <Link href="/step-normalizer" className={linkClass("/step-normalizer")}>
         Steps
       </Link>
+      <Link
+        href="/timing-normalizer"
+        className={linkClass("/timing-normalizer")}
+      >
+        Timing
+      </Link>
     </nav>
   );
 }
