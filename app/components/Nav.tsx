@@ -7,10 +7,12 @@ export function Nav() {
   const pathname = usePathname();
 
   const linkClass = (path: string) =>
-    pathname === path ? "font-semibold" : "underline";
+    pathname === path
+      ? "px-3 py-1 rounded bg-black text-white"
+      : "px-3 py-1 rounded hover:bg-gray-200";
 
   return (
-    <nav className="text-sm flex gap-3">
+    <nav className="flex gap-2">
       <Link href="/" className={linkClass("/")}>
         Home
       </Link>
@@ -25,6 +27,9 @@ export function Nav() {
         className={linkClass("/ingredient-list-normalizer")}
       >
         List
+      </Link>
+      <Link href="/step-normalizer" className={linkClass("/step-normalizer")}>
+        Steps
       </Link>
     </nav>
   );
