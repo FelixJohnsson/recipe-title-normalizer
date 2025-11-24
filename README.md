@@ -1,3 +1,28 @@
+# Recipe Title Normalizer
+
+Tiny tool to clean up messy recipe titles.
+
+- Paste any recipe title
+- Get:
+  - a cleaned, nicely capitalized title
+  - a URL-safe slug
+
+**Live demo:** https://recipe-title-normalizer.vercel.app/
+
+## Usage
+
+1. Open the live demo.
+2. Paste something like:
+
+   `best-ever   one-pot   chicken pasta!!! (so easy)`
+
+3. Get:
+
+   - Clean title: `Best Ever One Pot Chicken Pasta So Easy`
+   - Slug: `best-ever-one-pot-chicken-pasta-so-easy`
+
+Built with Next.js and Tailwind.
+
 ## Ingredient Quantity Normalizer
 
 Parse messy ingredient lines into structured JSON.
@@ -15,4 +40,39 @@ Output:
   "ingredient": "chopped onions",
   "note": "about 1 large onion"
 }
+```
+
+## Ingredient List Normalizer
+
+Normalize a whole list of ingredients at once into structured JSON.
+
+Example input:
+
+2 ½ cups chopped onions (about 1 large onion)  
+1 tbsp olive oil  
+3 cloves garlic, minced
+
+Example output:
+
+```json
+[
+  {
+    "quantity": 2.5,
+    "unit": "cups",
+    "ingredient": "chopped onions",
+    "note": "about 1 large onion"
+  },
+  {
+    "quantity": 1,
+    "unit": "tbsp",
+    "ingredient": "olive oil",
+    "note": null
+  },
+  {
+    "quantity": 3,
+    "unit": "cloves",
+    "ingredient": "garlic, minced",
+    "note": null
+  }
+]
 ```
